@@ -59,10 +59,7 @@ const Card = (props) => {
                   <button onClick={closeModal} className='outline-none'><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="rgb(59 130 246)" className="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></button>
                  </div>                  
                   
-                 <video id='video' controls="controls" preload='none' className='w-full mt-5' poster="https://assets.codepen.io/32795/poster.png">
-                  <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4' />
-                  <p>Your user agent does not support the HTML5 Video element.</p>
-                 </video>
+                 <video id='video' controls="controls" preload='none' className='w-full mt-5' src={props.parameter.video}></video>
                  
                  <button className='text-blue-500 mt-5'>#{props.parameter.category}</button>
                  <div className='font-bold text-[30px]'>{props.parameter.text}</div>
